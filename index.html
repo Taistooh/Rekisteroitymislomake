@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tyylit.css">
+    <title>Rekisteröitymislomake</title>
+</head>
+<body>
+    <header>
+        <h1>Rekisteröitymislomake</h1>
+    </header>
+    <div class="container">
+        <form action="/" id="lomake">
+            <h3><span>Siirry kentästä toiseen tab-näppäimellä</span></h3>
+            <div class="input-kentat">
+                <label for="kayttaja">Käyttäjä ID:</label>
+                <input type="text" name="kayttaja" id="kayttaja">
+                <div class="error"></div>
+            </div>
+            <div class="input-kentat">
+                <label for="salasana">Salasana:</label>
+                <input type="password" name="salasana" id="salasana">
+                <div class="error"></div>
+            </div>
+            <div class="input-kentat">
+                <label for="nimi">Nimi:</label>
+                <input type="text" name="nimi" id="nimi">
+                <div class="error"></div>
+            </div> 
+            <div class="input-kentat">
+                <label for="osoite">Osoite:</label>
+                <input type="text" name="osoite" id="osoite">
+                <div class="error"></div>
+            </div>
+            <div class="input-kentat">
+                <label for="maa">Maa:</label>
+                <select name="maa" id="maa">
+                    <option value="">(Valitse maa)</option>
+                    <option value="Suomi">Suomi</option>
+                    <option value="Ruotsi">Ruotsi</option>
+                    <option value="Venäjä">Venäjä</option>
+                    <option value="Englanti">Englanti</option>
+                    <option value="Espanja">Espanja</option>
+                </select>
+                <div class="error"></div>
+            </div>
+            <div class="input-kentat">
+                <label for="postnro">Postinumero:</label>
+                <input type="text" name="postnro" id="postnro">
+                <div class="error"></div>
+            </div>
+            <div class="input-kentat">
+                <label for="email">Sähköposti:</label>
+                <input type="text" name="email" id="email">
+                <div class="error"></div>
+            </div>
+            <div>
+                <label for="sukup">Sukupuoli:</label>
+                <input type="radio" id="mies" name="sukup" value="mies"> Mies
+                <input type="radio" id="nainen" name="sukup" value="nainen"> Nainen
+                <div class="error"></div>
+            </div>
+            <div>
+                <label for="kieli">Kieli:</label>
+                <input type="radio" id="suomi" name="kieli" value="suomi">
+                <label for="suomi">suomi</label>
+                <input type="radio" id="muu" name="kieli" value="muu">
+                <label for="muu">Muu kuin suomi</label>
+                <div class="error"></div>
+            </div><br>
+            <div>
+                <label for="tiedot">Lisätietoja:</label>
+                <textarea id="tiedot" name="tiedot" rows="6" cols="33"></textarea>
+            </div>
+            <button type="submit">Lähetä</button>   
+        </form>
+    </div>
+    <script defer src="main.js"></script>
+</body>
+</html>

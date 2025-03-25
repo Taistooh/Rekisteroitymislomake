@@ -1,0 +1,76 @@
+body {
+    background-image: url("paperi-tausta.jpg");
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #d5bdaf;
+    color: #847577;
+    border-radius: 40px;
+}
+
+h1 {
+    padding: 30px;
+}
+
+#lomake {
+    width: 300px;
+    margin: 20px auto 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 12px;
+    background-color: #f5ebe0;
+    color: #847577;
+    
+}
+
+#lomake h3 {
+    text-align: center;
+    color: #847577;
+}
+
+#lomake button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    font-weight: bold;
+    background-color: #e3d5ca;
+    color: #847577;
+    border: none;
+    border-radius: 10px;
+}
+
+.input-kentat {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-kentat input {
+    border: 2px solid #847577;
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 90%;
+}
+
+.input-kentat input:focus {
+    outline: 0;
+}
+
+.input-kentat.success input {
+    border-color: #09c372;
+}
+
+.input-kentat.error input {
+    border-color: #ff3860;
+}
+
+.input-kentat .error {
+    color: #ff3860;
+    font-size: 9px;
+    font-style: italic;
+    height: 13px;
+}
