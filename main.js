@@ -96,7 +96,11 @@ const validoiKentat = () => {
     }
 
     // Sukupuoli
-    if(!sukup) {
+    var sukupValittu = document.querySelector(
+        'input[name="sukup"]:checked');
+    if (sukupValittu) {
+        setSuccess(sukup)
+    } else {
         setError(sukup, 'Valitse sukupuoli');
     }
 
