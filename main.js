@@ -6,9 +6,6 @@ const osoite = document.getElementById('osoite');
 const maa = document.getElementById('maa');
 const postnro = document.getElementById('postnro');
 const email = document.getElementById('email');
-const sukup = document.querySelector('input[name="sukup"]:checked');
-const kieli = document.querySelector('input[name="kieli"]:checked');
-
 
 lomake.addEventListener('submit', e => {
 
@@ -96,16 +93,16 @@ const validoiKentat = () => {
     }
 
     // Sukupuoli
-    var sukupValittu = document.querySelector(
-        'input[name="sukup"]:checked');
-    if (sukupValittu) {
-        setSuccess(sukup)
-    } else {
-        setError(sukup, 'Valitse sukupuoli');
+    const sukupValittu = document.querySelector('input[name="sukup"]:checked');
+    if (!sukupValittu) {
+        setError(document.querySelector('input[name="sukup"]'), 
+        'Valitse sukupuoli');
     }
 
     // Kieli
-    if (!kieli) {
-        setError(kieli, 'Valitse kieli');
+    const kieliValittu = document.querySelector('input[name="kieli"]:checked');
+    if (!kieliValittu) {
+        setError(document.querySelector('input[name="kieli"]'), 
+        'Valitse kieli');
     }
 };

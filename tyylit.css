@@ -68,7 +68,8 @@ h1 {
     border-color: #ff3860;
 }
 
-.input-kentat .error {
+.input-kentat .error, 
+.radiot .error {
     color: #ff3860;
     font-size: 9px;
     font-style: italic;
