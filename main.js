@@ -6,11 +6,10 @@ const osoite = document.getElementById('osoite');
 const maa = document.getElementById('maa');
 const postnro = document.getElementById('postnro');
 const email = document.getElementById('email');
+const viesti = document.getElementById('onnistui');
 
 lomake.addEventListener('submit', e => {
-
     e.preventDefault();
-
     validoiKentat();
 });
 
@@ -32,7 +31,6 @@ const setSuccess = element => {
 }
 
 const validoiKentat = () => {
-
     const kayttajaValue = kayttaja.value.trim();
     const salasanaValue = salasana.value.trim();
     const nimiValue = nimi.value.trim();
@@ -40,7 +38,7 @@ const validoiKentat = () => {
     const maaValue = maa.value.trim();
     const postnroValue = postnro.value.trim();
     const emailValue = email.value.trim();
-    
+
     // Käyttäjä ID
     if (kayttajaValue.length < 6) {
         setError(kayttaja, 'Käyttäjätunnuksen tulee olla vähintään 6 merkkiä pitkä.')
@@ -105,4 +103,8 @@ const validoiKentat = () => {
         setError(document.querySelector('input[name="kieli"]'), 
         'Valitse kieli');
     }
+
+    viesti.textContent = "Lomake on lähetetty onnistuneesti!"
+    lomake.reset();
+    
 };
